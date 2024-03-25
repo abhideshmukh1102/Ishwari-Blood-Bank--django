@@ -1,0 +1,67 @@
+.logo1{
+    background-color:#33CAFF;
+}
+.logo1 h1{
+    
+    text-align: center;
+    font-size:40px;
+    text-decoration: underline;
+}
+.img1{
+    height: 150px;
+    width: 150px;
+}
+
+
+
+marquee p{
+    font-size: 20px;
+    color: red ;
+}
+
+marquee span{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+body{
+    background-image: url(Images/cells.gif);
+    background-size: cover;
+}
+
+#login2{
+    
+    margin-left: 200px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    max-width: 900px;
+    padding: 20px;
+    background-color:white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn{
+    font-family:'Alegreya Sans SC', sans-serif;
+    border: 1px solid yellowgreen;
+    padding: 10px;    
+    border-radius: 20px;
+    width: 20%;
+    cursor: pointer;
+    font-weight:700px;
+    margin: 0 10px; 
+    color:red;
+    font-size: medium;
+    background: none;    
+
+}
+.btn:hover{
+    background-color:red;
+    border: none;
+    color: white;
+}
+
+   

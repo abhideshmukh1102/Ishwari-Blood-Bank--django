@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href='./Images/LOGO_ISHWARI_BLOOD_BANK-removebg-preview.png' type="image/png">
+    <link rel="stylesheet" href='request.css'>
+    <link rel="stylesheet" href='https://fontawesome.com/v4.7.0/icon/bars'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<title>ISHWARI BLOOD BANK</title>
+
+<body>
+    <header>
+        <div id="logo"> <a href="index.html"><img src="./Images/LOGO_ISHWARI_BLOOD_BANK-removebg-preview.png""></a>
+        </div>
+        <div id="nav">
+            <div class="header-list" id="headerl">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="Request.html" target="_blank">Request</a></li>
+                    <li><a href="donate.html" target="_blank">Donate</a></li>
+                    <li><a href="help.html" target="_blank">contact</a></li>
+                    <li><a href="Register.html" target="_blank">Register</a></li>
+                    <li><a href="login.html" target="_blank">Login</a></li>
+                </ul>
+                
+                
+    </header>
+
+    <div class="container">
+        <h1>Blood Request Form</h1>
+        <form id="bloodRequestForm">
+            <label for="bloodType">Blood Type:</label>
+            <select id="bloodType" name="bloodType">
+                <option value="select">Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select><br>
+            <label for="units">Units Required:</label>
+            <input type="number" id="units" name="units" min="1" required><br>
+            <label for="contactName">Contact Name:</label>
+            <input type="text" id="contactName" name="contactName" required><br>
+            <label for="contactEmail">Contact Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required><br>
+            <label for="contact">Contact Information:</label>
+            <input type="tel" id="contact" name="contact" required><br>
+            <label for="aadhaarcard">Aadhaar Card:</label>
+            <input type="number" id="aadhaarcard" name="aadhaarcard" min="1" required><br>
+            <label for="hospital">Hospital/Clinic:</label>
+            <input type="text" id="hospital" name="hospital" required><br>
+            <label for="urgency">Urgency:</label>
+            <select id="urgency" name="urgency">
+                <option value="select">Select</option>
+                <option value="Urgent">Urgent</option>
+                <option value="Routine">Routine</option>
+            </select><br>
+            <label for="additionalInfo">Additional Information:</label><br>
+            <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50" required></textarea><br>
+            <button id="submit" type="submit">Submit Request</button>
+            <button id="reset" type="reset">Reset</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    
+
+    <!--FOOTER-->
+
+    <footer>
+        <div class="siteFooterBar">
+            <div class="content1">
+                <div class="foot">2024 © All rights reserved.</div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <h3>JOIN OUR CAUSE</h3>
+            <p>Donating blood or platelets can be intimidating and even scary. Time to put those hesitations
+                and
+                fears
+                aside. Learn from Ishwari Blood Bank and platelet donors how simple and easy it is to roll up a
+                sleeve
+                and help
+                save lives.</p>
+            <div class="socials">
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/givebloodnhs/" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/indiablooddonation/?hl=en" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="http://nbtc.naco.gov.in/" target="_blank"><i class="fas fa-globe"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+    <!--Javascript for pre-loader-->
+
+    <script>
+        const preloader = document.querySelector('.preloader');
+        const fadeEffect = setInterval(() => {
+            if (!preloader.style.opacity) {
+                preloader.style.opacity = 1;
+            }
+            if (preloader.style.opacity > 0) {
+                preloader.style.opacity -= 1.5;
+            } else {
+                clearInterval(fadeEffect);
+            }
+        }, 1500);
+        window.addEventListener('load', fadeEffect);
+    </script>
+    <!--js for scroll to top-->
+    <script src="up.js"></script>
+
+    <!--JAVASCRIPT FOR TOGGLE MENU -->
+    <script>
+        var headerl = document.getElementById("headerl");
+
+        function showMenu() {
+            headerl.style.right = "0";
+        }
+
+        function hideMenu() {
+            headerl.style.right = "-210px";
+        }
+    </script>
+
+
+    <!--js for scroll effects-->
+    <script src="scroll.js"></script>
+    <script src="request.js"></script>
+</body>
+</html>

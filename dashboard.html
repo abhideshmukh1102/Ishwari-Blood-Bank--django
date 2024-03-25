@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHWARI BLOOD BANK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Donor Dashboard</h1>
+    </header>
+
+    <section>
+        <h2>Welcome, [Donor Name]!</h2>
+
+        <h3>Your Information</h3>
+        <p><strong>Email:</strong> [Donor Email]</p>
+        <p><strong>Blood Type:</strong> [Donor Blood Type]</p>
+
+        <h3>Donation History</h3>
+        <ul id="donationHistory">
+            <!-- Donation history items will be added here dynamically -->
+        </ul>
+
+        <h3>Upcoming Appointments</h3>
+        <ul id="upcomingAppointments">
+            <!-- Upcoming appointment items will be added here dynamically -->
+        </ul>
+
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <script>
+        // Simulated donor data
+        const donorData = {
+            name: "Abhijeet Deshmukh",
+            bloodType: "AB+",
+            email: "Abhi@example.com",
+            donationHistory: [
+                { date: "2024-03-01", location: "Ishwari Blood Bank" },
+                { date: "2024-03-10", location: "Ishwari Blood Bank" },
+            ],
+            upcomingAppointments: [
+                { date: "2024-04-05", location: "Ishwari Blood Bank" },
+            ],
+        };
+
+        // Function to display donor information on the dashboard
+        function displayDonorInfo() {
+            document.querySelector('h2').innerText = `Welcome, ${donorData.name}!`;
+            document.querySelector('p:nth-child(4)').innerText = `Email: ${donorData.email}`;
+            document.querySelector('p:nth-child(3)').innerText = `Blood Type: ${donorData.bloodType}`;            
+        }
+
+        // Function to display donation history
+        function displayDonationHistory() {
+            const donationHistoryList = document.getElementById('donationHistory');
+
+            donorData.donationHistory.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>Date:</strong> ${item.date}<br><strong>Location:</strong> ${item.location}`;
+                donationHistoryList.appendChild(listItem);
+            });
+        }
+
+        // Function to display upcoming appointments
+        function displayUpcomingAppointments() {
+            const upcomingAppointmentsList = document.getElementById('upcomingAppointments');
+
+            donorData.upcomingAppointments.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>Date:</strong> ${item.date}<br><strong>Location:</strong> ${item.location}`;
+                upcomingAppointmentsList.appendChild(listItem);
+            });
+        }
+
+        // Function to simulate logout (clears donor data)
+        function logout() {
+            alert('Logged out');
+            window.location.href = 'login.html'; // Redirect to login page
+        }
+
+        // Call functions to populate the dashboard
+        displayDonorInfo();
+        displayDonationHistory();
+        displayUpcomingAppointments();
+    </script>
+</body>
+</html>
