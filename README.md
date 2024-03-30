@@ -1,9 +1,9 @@
-# Blood-Buddy 🏥
+# ISHWARI - BLOOD BANK 🏥
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)  ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)
 
 ![image](https://user-images.githubusercontent.com/75671152/132247486-0eb918aa-7f5e-4042-8380-82ce77d4d289.png)
 
-**Blood Buddy** is a website that offers blood donation services to anyone in need. The website works :
+**ISHWARI BLOOD BANK** is a website that offers blood donation services to anyone in need. The website works :
 
 1. Register on the website.
 2. Add your address.
@@ -45,7 +45,7 @@ git clone --depth 1 https://github.com/<your_user_name>/Blood-Buddy.git
 **3.** Navigate to the project directory :file_folder: .
 
 ```
-cd Blood-Buddy
+cd ISHWARI BLOOD BANK
 ```
 
 **4.** Add a remote upstream to the original repository.
